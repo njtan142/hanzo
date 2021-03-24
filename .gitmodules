@@ -1,0 +1,3 @@
+[submodule "Hanzo/vendor/spdlog"]
+	path = Hanzo/vendor/spdlog
+	url = https://github.com/gabime/spdlog
