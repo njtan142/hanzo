@@ -7,6 +7,12 @@
     <Filter Include="Hanzo\Events">
       <UniqueIdentifier>{89E50E21-7548-9EC5-1ECE-D67B0A106A48}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hanzo.h" />
@@ -34,6 +40,12 @@
     <ClInclude Include="src\Hanzo\Log.h">
       <Filter>Hanzo</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hanzo\Window.h">
+      <Filter>Hanzo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
@@ -42,6 +54,9 @@
     </ClCompile>
     <ClCompile Include="src\Hanzo\Log.cpp">
       <Filter>Hanzo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
     </ClCompile>
     <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>

@@ -4,27 +4,27 @@
 #include "Hanzo/Events/ApplicationEvent.h"
 #include "Hanzo/Log.h"
 
+#include "GLFW/glfw3.h"
+
 
 namespace Hanzo {
-	Application::Application() {
-
+	Application::Application()
+	{
+		m_Window = std::unique_ptr<Window>(Window::Create());
 	}
 
-	Application::~Application() {
-
-	}
-
-	void Application::Run() 
+	Application::~Application()
 	{
 
-		WindowResizeEvent e(1200, 720);
-		if (e.IsInCategory(EventCategoryApplication))
+	}
+
+	void Application::Run()
+	{
+		while (m_Running)
 		{
-			HZ_TRACE(e);
-		}
-		if (e.IsInCategory(EventCategoryInput))
-		{
-			HZ_TRACE(e);
+			glClearColor(1, 0, 1, 1);
+			glClear(GL_COLOR_BUFFER_BIT);
+			m_Window->OnUpdate();
 		}
 		while (true);
 	}

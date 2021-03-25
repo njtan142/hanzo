@@ -10,6 +10,14 @@ workspace "Hanzo"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--Include directories relative to root folder (solution directory)
+-- Include directories relative to root folder (solution directory)
+IncludeDir = {}
+IncludeDir["GLFW"] = "Hanzo/vendor/GLFW/include"
+
+include "Hanzo/vendor/GLFW"
+
+
 project "Hanzo"
 	location "Hanzo"
 	kind "SharedLib"
@@ -30,8 +38,15 @@ project "Hanzo"
 
 	includedirs
 	{
+		"%{prj.name}/src/",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{prj.name}/src/"
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links
+	{
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"
