@@ -1,9 +1,9 @@
 #pragma once
 
+#include "hzpch.h"
+
 #include "Hanzo/Core.h"
 
-#include <string>
-#include <functional>
 
 namespace Hanzo {
 

@@ -34,6 +34,7 @@
     <ClInclude Include="src\Hanzo\Log.h">
       <Filter>Hanzo</Filter>
     </ClInclude>
+    <ClInclude Include="src\hzpch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hanzo\Application.cpp">
@@ -42,5 +43,6 @@
     <ClCompile Include="src\Hanzo\Log.cpp">
       <Filter>Hanzo</Filter>
     </ClCompile>
+    <ClCompile Include="src\hzpch.cpp" />
   </ItemGroup>
 </Project>

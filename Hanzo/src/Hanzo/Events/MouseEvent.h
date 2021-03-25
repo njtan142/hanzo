@@ -1,8 +1,9 @@
 #pragma once
 
+#include "hzpch.h"
+
 #include "Event.h"
 
-#include <sstream>
 
 namespace Hanzo {
 
@@ -12,7 +13,7 @@ namespace Hanzo {
 		MouseMovedEvent(float x, float y)
 			: m_MouseX(x), m_MouseY(y) {}
 
-		inline float GetX() const { return m_MouseX; }
+		inline float GetX() const { return m_MouseX; } 
 		inline float GetY() const { return m_MouseY; }
 
 		std::string ToString() const override

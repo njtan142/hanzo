@@ -18,6 +18,9 @@ project "Hanzo"
 	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+	pchheader "hzpch.h"
+	pchsource "Hanzo/src/hzpch.cpp"
+
 	files
 	{
 		"%{prj.name}/src/**.h",
