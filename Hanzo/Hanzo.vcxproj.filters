@@ -37,6 +37,12 @@
     <ClInclude Include="src\Hanzo\Events\MouseEvent.h">
       <Filter>Hanzo\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Hanzo\Layer.h">
+      <Filter>Hanzo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hanzo\LayerStack.h">
+      <Filter>Hanzo</Filter>
+    </ClInclude>
     <ClInclude Include="src\Hanzo\Log.h">
       <Filter>Hanzo</Filter>
     </ClInclude>
@@ -50,6 +56,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hanzo\Application.cpp">
+      <Filter>Hanzo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hanzo\Layer.cpp">
+      <Filter>Hanzo</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hanzo\LayerStack.cpp">
       <Filter>Hanzo</Filter>
     </ClCompile>
     <ClCompile Include="src\Hanzo\Log.cpp">
