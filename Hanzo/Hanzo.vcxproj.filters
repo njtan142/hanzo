@@ -4,6 +4,9 @@
     <Filter Include="Hanzo">
       <UniqueIdentifier>{45F94C0D-B10D-75BE-7A8F-181EE66271EF}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Hanzo\Events">
+      <UniqueIdentifier>{89E50E21-7548-9EC5-1ECE-D67B0A106A48}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Hanzo.h" />
@@ -15,6 +18,18 @@
     </ClInclude>
     <ClInclude Include="src\Hanzo\EntryPoint.h">
       <Filter>Hanzo</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hanzo\Events\ApplicationEvent.h">
+      <Filter>Hanzo\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hanzo\Events\Event.h">
+      <Filter>Hanzo\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hanzo\Events\KeyEvent.h">
+      <Filter>Hanzo\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hanzo\Events\MouseEvent.h">
+      <Filter>Hanzo\Events</Filter>
     </ClInclude>
     <ClInclude Include="src\Hanzo\Log.h">
       <Filter>Hanzo</Filter>
