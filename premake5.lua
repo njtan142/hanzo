@@ -11,10 +11,14 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hanzo/vendor/GLFW/include"
 IncludeDir["Glad"] = "Hanzo/vendor/Glad/include"
+IncludeDir["ImGui"] = "Hanzo/vendor/imgui"
+
 
 
 include "Hanzo/vendor/GLFW"
 include "Hanzo/vendor/Glad"
+include "Hanzo/vendor/imgui"
+
 
 
 
@@ -37,13 +41,14 @@ project "Hanzo"
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
 		"%{IncludeDir.GLFW}",
-		"%{IncludeDir.Glad}" 
-
+		"%{IncludeDir.Glad}",
+		"%{IncludeDir.ImGui}" 
 	}
 	links 
 	{ 
 		"GLFW",
 		"Glad",
+		"ImGui",
 		"opengl32.lib"
 	}
 	filter "system:windows"

@@ -24,6 +24,7 @@ class Sandbox : public Hanzo::Application
 public:
 	Sandbox() {
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Hanzo::ImGuiLayer());
 	}
 	~Sandbox() {
 
