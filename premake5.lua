@@ -10,7 +10,15 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 IncludeDir["GLFW"] = "Hanzo/vendor/GLFW/include"
+IncludeDir["Glad"] = "Hanzo/vendor/Glad/include"
+
+
 include "Hanzo/vendor/GLFW"
+include "Hanzo/vendor/Glad"
+
+
+
+
 project "Hanzo"
 	location "Hanzo"
 	kind "SharedLib"
@@ -28,21 +36,25 @@ project "Hanzo"
 	{
 		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include",
-		"%{IncludeDir.GLFW}"
+		"%{IncludeDir.GLFW}",
+		"%{IncludeDir.Glad}" 
+
 	}
 	links 
 	{ 
 		"GLFW",
+		"Glad",
 		"opengl32.lib"
 	}
 	filter "system:windows"
 		cppdialect "C++17"
-		staticruntime "Off"
+		staticruntime "On"
 		systemversion "latest"
 		defines
 		{
 			"HZ_PLATFORM_WINDOWS",
-			"HZ_BUILD_DLL"
+			"HZ_BUILD_DLL",
+			"GLFW_INCLUDE_NONE"
 		}
 		postbuildcommands
 		{
